@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1>Dãy nhưng số fibonacci đầu tiên :</h1>
+    <script>
+        var f0 , f1 , fn , n ;
+         n = parseInt(prompt("Nhập số thứ tự muốn lấy đến:"))
+         f0 = 0 ;
+         f1 = 1 ;
+         fn = 0 ;
+        for(var i = 0 ; i  <= n ; i++ ){
+            if( i < 2 ){
+                document.write(i," , ")
+                if( i % 5 === 0 ){
+                    document.write(" Số đầu tiên chia hết cho 5 ")
+                    break;
+                }
+               
+            }else{
+                fn = f0 + f1 ;
+                f0 = f1 ;
+                f1 = fn ;
+                document.write(fn," , ")
+                if( fn % 5 === 0){
+                    document.write(" Số đầu tiên chia hết cho 5 ")
+                    break;
+                }
+            }
+           
+        }
+        
+    </script>
+</body>
+</html>
